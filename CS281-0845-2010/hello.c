@@ -2,6 +2,9 @@
 #include <mpi.h>
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 int main(int argc, char* argv[]){
 
     int i, rank, nodes;
@@ -25,6 +28,7 @@ int main(int argc, char* argv[]){
 }
 =======
 
+>>>>>>> 1a4b8d80f962a4bae0dbee3739f1d3989acb0838
 int main(int argc, char* argv[])
 {
 	int my_rank, my_size;
@@ -34,5 +38,9 @@ int main(int argc, char* argv[])
 	printf("Hello world, I am processor %d of %d \n", my_rank, my_size);
 	MPI_Finalize();
 	return 0;
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 471849e98d4679004aeaad1f3d49800435173043
+>>>>>>> 1a4b8d80f962a4bae0dbee3739f1d3989acb0838
