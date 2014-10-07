@@ -27,7 +27,7 @@ void broadcast(void* data, int count, MPI_Datatype datatype, int root, MPI_Comm 
     }
 }
 
-int main(int argc, char* argv){
+int main(int argc, char* argv[]){
     MPI_Init(NULL, NULL);
     int my_rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
@@ -43,4 +43,6 @@ int main(int argc, char* argv){
     }
 
     MPI_Finalize();
+
+    return 0;
 }
