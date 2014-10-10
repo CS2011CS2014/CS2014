@@ -2,7 +2,7 @@
 #include <string.h>
 #include <mpi.h>
 
-int main(int argc,char* argv[]){
+int main(int argc, char* argv[]){
     int my_rank, tag = 0;
     char message [48];
     MPI_Status status;
@@ -14,7 +14,7 @@ int main(int argc,char* argv[]){
 
     if(my_rank == 0){
         strcpy(message, "Hello! This is a P2P message :-)");
-        MPI_Send(message, strlen(message)+1, MPI_CHAR, 1, tag, MPI_COMM_WORLD );
+        MPI_Send(message, strlen(message)+1, MPI_CHAR, 1, tag, MPI_COMM_WORLD);
         printf("Mesage has been sent by Node %d\n", my_rank);
     }
 

@@ -1,22 +1,26 @@
 #include <stdio.h>
+#include <string.h>
 #include <mpi.h>
 
-int main(){
-    MPI_Init(NULL, NULL);
-    int world_rank;
-    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+int main(int argc, char* argv[]){
 
-    int world_size;
+    int world_rank, tag = 0, world_size;
+    char message[96];
+    MPI_Status status;
+
+    MPI_Init(NULL, NULL);
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
     MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
-    int number;
     if(world_rank == 0){
-        number = -1;
-        MPI_Send(&number, 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
+        strcpy(message, "SOS! I'm stuck with a stray thread. Help me");
+        MPI_Send(message, strlen(message)+1, MPI_CHAR, 1, tag, MPI_COMM_WORLD);
+
     }else if(world_rank == 1){
-        MPI_Recv(&number, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-        printf("Process 1 received umber %d from process 0\n", number);
+        MPI_Recv(message, 96, MPI_CHAR, 0, tag, MPI_COMM_WORLD, &status);
+        printf("Process 1 received message >> %s >>from process 0\n", message);
     }
 
     MPI_Finalize();
+    return 0;
 }
