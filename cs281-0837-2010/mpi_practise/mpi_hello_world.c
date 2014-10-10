@@ -3,6 +3,14 @@
 
 int main(){
 
+    /**
+     * Initialize the MPI environment
+     * Get the world size
+     * Get the rank of each processor in the MPI world
+     * Get processor name (optional)
+     * Print the processor name and rank in the MPI world
+     */
+
     // Initializing the MPI environment
     MPI_Init(NULL, NULL);
 
