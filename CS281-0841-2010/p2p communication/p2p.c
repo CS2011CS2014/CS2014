@@ -2,6 +2,15 @@
 #include <string.h>
 #include <mpi.h>
 
+/*
+========================================================================================================
+This program demonstrates point to point comminication between 2 processes.
+Process 0 sends the message 'Hello' using the function MPI_Send. This message is received by process 2
+using the function MPI Recv
+The program output was stored in the file output.txt
+========================================================================================================
+*/
+
 int main(int argc,char *argv[])
 {
 int my_rank,p,tag=0;
