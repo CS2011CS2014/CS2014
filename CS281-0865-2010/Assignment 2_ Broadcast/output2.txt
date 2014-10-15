@@ -1,0 +1,12 @@
+PROGRAM OUTPUT:
+I am Processor 0 Broadcasting message 'Hello World!' to 9 other processors
+
+Processor 6 Received message 'Hello World!' from processor 0 
+Processor 1 Received message 'Hello World!' from processor 0 
+Processor 8 Received message 'Hello World!' from processor 0 
+Processor 4 Received message 'Hello World!' from processor 0 
+Processor 9 Received message 'Hello World!' from processor 0 
+Processor 3 Received message 'Hello World!' from processor 0 
+Processor 2 Received message 'Hello World!' from processor 0 
+Processor 5 Received message 'Hello World!' from processor 0 
+Processor 7 Received message 'Hello World!' from processor 0 

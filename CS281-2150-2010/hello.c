@@ -1,3 +1,4 @@
+/* C Example */
 #include <mpi.h>
 #include <stdio.h>
  
