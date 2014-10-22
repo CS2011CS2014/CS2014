@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
         MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
         if(rank == root) {
-           buf = 777;
+           buf = 500;
         }
 
         printf("[%d]: Before Bcast, buf is %d\n", rank, buf);

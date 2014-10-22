@@ -3,7 +3,7 @@
 
 int main(int argc,char* argv[])
 { 
-	int i,my_rank,my_size,number=1000;
+	int i,my_rank,my_size,number=800;
 	MPI_Status status;
 
 	MPI_Init(&argc,&argv);
@@ -16,11 +16,11 @@ int main(int argc,char* argv[])
 	for(i=1;I<my_size;i++)
 		{
 
-	printf("BRoadcasting %d to processor  %d\n",number,i);
+	printf("Broadcasting %d to processor  %d\n",number,i);
 		}
 	else
 		{
-	printf("BRoadcasting %d receiving...  %d\n",my_rank,number,root);
+	printf("Broadcasting %d receiving...  %d\n",my_rank,number,root);
 		}
 	}
 	MPI_Finalize();

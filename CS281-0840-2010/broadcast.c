@@ -1,15 +1,5 @@
 #include <mpi.h>
 #include <stdio.h>
-
-/*
-========================================================================================================
-This program demonstrates a root process 0 broadcasting a message to all other processes.
-The function MPI_Bcast is used both by the root process to send the message and by the receiving processes
-to receive the message.
-The program output was stored in the file output.txt
-========================================================================================================
-*/
-
 int main (int argc, char *argv[]){
         int rank,size,i,msg=1500;
         MPI_Init(&argc,&argv);
