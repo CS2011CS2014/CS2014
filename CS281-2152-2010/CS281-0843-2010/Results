@@ -1,7 +1,0 @@
-esther@esther-Inspiron-N5050:~/Documents/Paralell$ mpicc -o broadcast broadcast.c
-esther@esther-Inspiron-N5050:~/Documents/Paralell$ mpiexec -np 4 ./broadcast
-Master broadcasting message- BROADCAST MESSAGE 
-Process 1 received broadcast message-BROADCAST MESSAGE 
-Process 2 received broadcast message-BROADCAST MESSAGE 
-Process 3 received broadcast message-BROADCAST MESSAGE 
-esther@esther-Inspiron-N5050:~/Documents/Paralell$ 
