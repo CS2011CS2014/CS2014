@@ -1,3 +1,7 @@
+/* A program to implement point to point communication between two processors.
+
+Process 0 sends the message 'Hello' using the function MPI_Send. This message is received by process 0 using the function MPI_Recv */
+
 #include <stdio.h>
 #include <string.h>
 #include <mpi.h>
@@ -16,7 +20,7 @@ if(my_rank==0)
 {
 strcpy(msg,"Hello");
 MPI_Send( msg,strlen(msg)+1,MPI_CHAR,1,tag,MPI_COMM_WORLD );
-printf("Mesage sent by process %d\n",my_rank);
+printf("Mesage Hello sent by process %d\n",my_rank);
 }
 
 

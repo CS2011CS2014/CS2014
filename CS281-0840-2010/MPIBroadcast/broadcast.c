@@ -1,7 +1,11 @@
+/*A program to broadcast 999 by a root process 0 to all other processes.
+
+MPI_Bcast is the function used used by the root process to send the message and by the receiving processes to receive the broadcasted message.*/
+
 #include <mpi.h>
 #include <stdio.h>
 int main (int argc, char *argv[]){
-        int rank,size,i,msg=1500;
+        int rank,size,i,msg=999;
         MPI_Init(&argc,&argv);
         MPI_Comm_rank(MPI_COMM_WORLD, &rank);
         MPI_Comm_size(MPI_COMM_WORLD, &size);
@@ -10,7 +14,7 @@ int main (int argc, char *argv[]){
 
 	    if(rank==0)
 	    {
-	    printf("Root process broadcasting message: %d \n",msg);
+	    printf("The root process broadcasting message: %d \n",msg);
 	    }
 	    else
 	    {
