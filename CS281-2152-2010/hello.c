@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <mpi.h>
 
-
+//comment
 int main(int argc, char* argv[])
 {
 	int my_rank, my_size;

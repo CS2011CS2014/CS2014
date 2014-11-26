@@ -1,0 +1,149 @@
+bettie@bettie-300E4C-300E5C-300E7C ~ $ cd Desktop
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop $ cd Sharon
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon $ cd CS281-0850-2010
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpicc -o bitonic bitonic.c -lm
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 1 ./bitonic 128000000
+Number of Processes spawned: 1
+Displaying sorted array (only 10 elements for quick verification)
+0 12632019 25263534 37902189 50529288 63164665 75797887 88430295 101159179 114578570 
+
+Time Elapsed (Sec): 46.731168
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 2 ./bitonic 128000000
+Number of Processes spawned: 2
+Displaying sorted array (only 10 elements for quick verification)
+2 12632589 25259785 37899663 50533348 63167424 75799021 88436577 101164371 114584191 
+
+Time Elapsed (Sec): 29.301961
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 4 ./bitonic 128000000
+Number of Processes spawned: 4
+Displaying sorted array (only 10 elements for quick verification)
+1 12632200 25254785 37895632 50528517 63168271 75792497 88425304 101166934 114573770 
+
+Time Elapsed (Sec): 31.242069
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 8 ./bitonic 128000000
+Number of Processes spawned: 8
+Displaying sorted array (only 10 elements for quick verification)
+1 12606512 25223235 37861590 50508310 63150085 75789104 88429552 101168159 114588109 
+
+Time Elapsed (Sec): 47.572934
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 16 ./bitonic 128000000
+Number of Processes spawned: 16
+Displaying sorted array (only 10 elements for quick verification)
+37 12626604 25245335 37872537 50506247 63133276 75769345 88431631 101184316 114607939 
+
+Time Elapsed (Sec): 66.319695
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 32 ./bitonic 128000000
+Number of Processes spawned: 32
+Displaying sorted array (only 10 elements for quick verification)
+6 12644651 25268478 37879340 50513689 63128683 75754249 88360997 101103688 114545417 
+
+Time Elapsed (Sec): 91.553607
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 32 ./bitonic 64000000
+Number of Processes spawned: 32
+Displaying sorted array (only 10 elements for quick verification)
+9 6308458 12616753 18922926 25249167 31574001 37961386 44464659 50969834 57488603 
+
+Time Elapsed (Sec): 44.298041
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 16 ./bitonic 64000000
+Number of Processes spawned: 16
+Displaying sorted array (only 10 elements for quick verification)
+6 6321907 12644751 18974890 25279148 31605335 37974380 44470564 50992974 57504980 
+
+Time Elapsed (Sec): 32.096634
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 8 ./bitonic 64000000
+Number of Processes spawned: 8
+Displaying sorted array (only 10 elements for quick verification)
+18 6316736 12637943 18955974 25268281 31582483 37966392 44487578 50987872 57496917 
+
+Time Elapsed (Sec): 23.035033
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 4 ./bitonic 64000000
+Number of Processes spawned: 4
+Displaying sorted array (only 10 elements for quick verification)
+0 6312123 12636912 18955814 25267505 31582805 37970660 44477198 50983904 57491543 
+
+Time Elapsed (Sec): 15.077584
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 2 ./bitonic 64000000
+Number of Processes spawned: 2
+Displaying sorted array (only 10 elements for quick verification)
+1 6316165 12625295 18941960 25254977 31577068 37966663 44473573 50981286 57487328 
+
+Time Elapsed (Sec): 14.122800
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 1 ./bitonic 64000000
+Number of Processes spawned: 1
+Displaying sorted array (only 10 elements for quick verification)
+1 6317342 12635266 18945705 25262206 31578368 37965978 44475482 50984264 57492852 
+
+Time Elapsed (Sec): 22.501352
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 1 ./bitonic 32000000
+Number of Processes spawned: 1
+Displaying sorted array (only 10 elements for quick verification)
+0 3157707 6355759 9560776 12764933 15970098 19178488 22386324 25589760 28795476 
+
+Time Elapsed (Sec): 10.797945
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 2 ./bitonic 32000000
+Number of Processes spawned: 2
+Displaying sorted array (only 10 elements for quick verification)
+9 3160391 6360836 9565894 12771936 15975304 19182553 22385331 25593109 28797801 
+
+Time Elapsed (Sec): 6.781176
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 4 ./bitonic 32000000
+Number of Processes spawned: 4
+Displaying sorted array (only 10 elements for quick verification)
+0 3153571 6358753 9569015 12775006 15982986 19183375 22387936 25594590 28795755 
+
+Time Elapsed (Sec): 7.290703
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 8 ./bitonic 32000000
+Number of Processes spawned: 8
+Displaying sorted array (only 10 elements for quick verification)
+1 3153832 6350524 9563229 12765799 15972283 19180583 22381991 25589147 28794719 
+
+Time Elapsed (Sec): 10.732428
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 16 ./bitonic 32000000
+Number of Processes spawned: 16
+Displaying sorted array (only 10 elements for quick verification)
+10 3161714 6369653 9575811 12778490 15975595 19187032 22388095 25585933 28793184 
+
+Time Elapsed (Sec): 15.927226
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 32 ./bitonic 32000000
+Number of Processes spawned: 32
+Displaying sorted array (only 10 elements for quick verification)
+26 3157966 6355783 9554931 12767592 15971670 19184104 22388225 25612333 28806971 
+
+Time Elapsed (Sec): 22.043017
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 32 ./bitonic 16000000
+Number of Processes spawned: 32
+Displaying sorted array (only 10 elements for quick verification)
+33 1597590 3184438 4779411 6377127 7976167 9582898 11178944 12789304 14385508 
+
+Time Elapsed (Sec): 10.826498
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 16 ./bitonic 16000000
+Number of Processes spawned: 16
+Displaying sorted array (only 10 elements for quick verification)
+0 1589323 3179461 4782056 6389509 7988961 9597915 11200258 12799495 14399111 
+
+Time Elapsed (Sec): 7.462630
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 8 ./bitonic 16000000
+Number of Processes spawned: 8
+Displaying sorted array (only 10 elements for quick verification)
+3 1593973 3185279 4783773 6382501 7986686 9589715 11187725 12789055 14393406 
+
+Time Elapsed (Sec): 5.566547
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 4 ./bitonic 16000000
+Number of Processes spawned: 4
+Displaying sorted array (only 10 elements for quick verification)
+3 1589160 3177891 4779988 6380536 7979594 9582082 11189166 12790818 14398285 
+
+Time Elapsed (Sec): 3.479040
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 2 ./bitonic 16000000
+Number of Processes spawned: 2
+Displaying sorted array (only 10 elements for quick verification)
+1 1590714 3180080 4778721 6381268 7983265 9588141 11190873 12791373 14396715 
+
+Time Elapsed (Sec): 3.252747
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 1 ./bitonic 16000000
+Number of Processes spawned: 1
+Displaying sorted array (only 10 elements for quick verification)
+0 1590405 3181293 4781200 6384300 7988590 9590324 11194151 12795515 14396719 
+
+Time Elapsed (Sec): 5.206245
+bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/Sharon/CS281-0850-2010 $ mpiexec -np 1 ./bitonic 16000000
