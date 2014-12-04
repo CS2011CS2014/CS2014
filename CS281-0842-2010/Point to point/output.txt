@@ -1,0 +1,5 @@
+0 sent 0; received 4
+1 sent 1; received 0
+3 sent 3; received 2
+4 sent 4; received 3
+2 sent 2; received 1
