@@ -8,9 +8,3 @@ The results of running the program are pushed to the external file results.txt. 
 
 
 
-Yours sincerely,
-
-The Avengers.
-
-
-
