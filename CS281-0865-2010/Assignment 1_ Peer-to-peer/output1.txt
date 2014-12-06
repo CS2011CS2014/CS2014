@@ -1,5 +1,0 @@
-PROGRAM OUTPUT:
-
-Processor 0 Sending message 'Hello World!' to processor 1.
-
-Processor 1 Received message 'Hello World!' from processor 0.
