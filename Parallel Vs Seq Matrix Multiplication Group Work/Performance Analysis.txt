@@ -1,0 +1,98 @@
+/**************** Performance Analysis ****************
+
+As every computer science student should easily see, the number of
+operations of the conventional matrix-multiplication algorithm is N^3
+(N cubed).  With P parallel processors, the number of operations is
+ideally N^3/P.  However, we should also take into account the cost of
+communication.  A critical ratio is TCOMM/TCALC : the time to
+communicate a datum versus the time to perform a calculation. On all
+but the most powerful supercomputers, where all processors share RAM,
+TCOMM will be considerably slower than TCALC.  On  IP-over-Ethernet
+cluster, this ratio will be quite terrible :(.  It is difficult however,
+to pin down this ratio to a definite value.  For example, on any network, 
+sending 1000 bytes in one packet will be much faster than sending
+1000 individual packets. The exact overhead of communication will depend
+on many factors.  
+
+It is still possible, however, to do some abstract analysis. The amount of
+communication required by the program is 3*N^2. That is:
+   
+     N^2  for broadcasting array B
+     N^2  for sending out each interval of rows (P*(N^2/P) = N^2)
+     N^2  for receiving the results back from the worker processors.
+
+The number of calculations required by the algorithm is N^3.  the
+ratio is thus TCOMM*3*N^2 /  TCALC*N^3.  However, if we take the limit
+of this formula as N approaches infinity, we get ZERO. What this means is
+that the overhead of communication will become less and less significant as
+the size of the matrices increase. 
+
+Analyzing the same problem from another angle, let's assume for the
+moment that the ration TCOMM/TCALC is 1. Then, taking into account the
+cost of communication, the number of operations (both calculations and
+communications) performed by each of the P processors is
+
+  N^3/P + N^2 + 2N^2/P  
+
+The cost of communication is the cost of receiving the broadcast plus the
+costs of receiving and sending the rows it's responsible for.  If we compare
+this value with the conventional cost of computation in the case of a 
+single processor (N^3), we get:
+
+    3N^3 + (P+2)*N^2
+    ---------------
+         P*N^3
+
+The limit as N approaches infinity is 1/P (apply L'Hopital's rule 3 times).
+This should accord perfectly with our intuition.  That is, if the overhead
+of communication can be factored out, then as the size of the matrix increases
+then using P processors will speed up the problem by P times.  For example, 
+if we used 4 processors, then the maximum speedup will be 4x.  This is 
+also the limit according to Amdahl's law regarding parallel speedup.
+
+The matrix-multiplication algorithm is therefore a reasonable
+candidate for parallel speed-up.  (the example in the book is only for
+matrix-vector multiplication).  But now consider a different problem.  Let's
+say we want to simply take matrices A and B and add them.  That is, 
+AB[i][j] = A[i][j]+B[i][j].  This algorithm is only N^2. If we attempted
+to use P processors, then the ratio of communication over computation is
+
+        3*N^2        
+       -------    =  3
+         N^2         
+
+  What does this mean?  It means you should be locked up if you tried to
+parallelize this algorithm, unless you can dig up a system where
+TCOMM/TCALC is less than 1/3.  
+   
+
+
+         =========================================
+
+                       AMDAHL'S LAW:
+
+T1 = time for a sequential solution (one processor) for the algorithm.
+Tp = time using p processors
+q  = value between 0 and 1 indicating portion of program that's parallelizable
+(1-q) therefore prepresents the portion that must be execute sequentialy.
+
+   ***  Speedup = T1/Tp = 1/((1-q)+q/p) <= 1/(1-q)  ***
+
+
+In the worst case, no part of the program is parallelizable, which
+means q=0 and Speedup = 1, or no speedup at all.
+
+In the best case, q = 1, the entire program is parallelizable, which 
+means Speedup = p, the number of processors.
+
+
+Corollary (very important principle in computer science):
+
+   ***  There cannot be super-linear speedup.  ***
+
+Superlinear speed up means, for example, that with 4 processors somehow
+we can achieve 10x speedup for the same algorithm.  This is impossible since
+according to Amdahl's law, Speedup will be <= 4.  Super-linear speedup
+is claimed to be possible with "quantum computing" however.  But quantum 
+computing is right now a purely mathematical game.
+
