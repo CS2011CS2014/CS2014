@@ -1,10 +1,10 @@
 /*
-CS281-0862/2010
-BRIAN O. ONYANDO
+CS281-0834/2010
+JOSEPH SHARIA AZEI
 Assignment 2
 
 BROADCASTING AMONG PROCESSES:
-This is a simple program to broadcast a message from one processor to all other processors.
+This program broadcasts a message from one processor to all other processors.
 */
 
 #include <stdio.h>

@@ -1,10 +1,10 @@
 /*
-CS281-0862/2010
-BRIAN O. ONYANDO
+CS281-0834/2010
+JOSEPH SHARIA AZEI
 Assignment 1
 
 PEER-TO-PEER COMMUNICATION:
-This is a simple program to send a message from one processor to another
+This program sends message from one processor to another
 */
 
 #include <stdio.h>
