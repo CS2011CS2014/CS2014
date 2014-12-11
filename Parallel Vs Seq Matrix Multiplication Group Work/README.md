@@ -13,14 +13,14 @@ RegNo:CS281-0856/2010
 Name: Benson Njogu
 Reg No: CS281-0857/2010
 
-Name: Leroy Kayanda
+Name: Leroy Kotia Kayanda
 Reg Number: CS281-0841/2010
 
 Name: Morris Iriga
 Reg Number: CS281-3340/2010
 
 
-Name: Alphone Joel Awuor
+Name: Alfonce Joel Owuor
 Reg Number: CS281-0863/2010
 
 ============================================
