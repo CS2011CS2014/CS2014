@@ -23,4 +23,7 @@ Reg Number: CS281-3340/2010
 Name: Alfonce Joel Owuor
 Reg Number: CS281-0863/2010
 
+Name: Dennis Mwangi Baru
+Reg Number: CS281-0835/2010
+
 ============================================
