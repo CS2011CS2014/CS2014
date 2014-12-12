@@ -1,0 +1,4 @@
+Process 1 received broadcast message: 2100 
+Process 2 received broadcast message: 2100 
+Process 3 received broadcast message: 2100 
+
