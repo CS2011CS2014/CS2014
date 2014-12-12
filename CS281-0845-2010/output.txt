@@ -1,0 +1,2 @@
+Successfully generated 10 by 10 matrix 
+Time taken to decompose : 0.044039 seconds 
