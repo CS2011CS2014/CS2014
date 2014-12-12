@@ -1,9 +1,4 @@
-/* 
-	This program prints a Hello world message from every node
-	Each process prints its rank number 
-	Each process also prints the total number of processers.
-*/
-
+// Author Paul/
 #include <mpi.h>
 #include <stdio.h>
  

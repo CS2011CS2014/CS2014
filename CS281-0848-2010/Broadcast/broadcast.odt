@@ -1,0 +1,12 @@
+﻿/*CS281-0848/2010*/
+------------------------
+
+
+Process 0 broadcasting data 100
+Process 1 received data 100 from root process
+Process 3 received data 100 from root process
+Process 5 received data 100 from root process
+Process 6 received data 100 from root process
+Process 2 received data 100 from root process
+Process 4 received data 100 from root process
+

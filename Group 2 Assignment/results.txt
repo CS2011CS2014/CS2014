@@ -1,0 +1,3 @@
+lcs length = 4
+lcs sequence
+GTAB

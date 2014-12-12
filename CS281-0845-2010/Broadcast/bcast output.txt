@@ -1,0 +1,12 @@
+stephen@stephen-Satellite-C850-F32Q:~/CS2014/CS281-0845-2010/Broadcast$ mpirun -np 5 ./bcast
+[0]: Before Bcast, buf is 500
+[1]: Before Bcast, buf is 0
+[0]: After Bcast, buf is 500
+[1]: After Bcast, buf is 500
+[2]: Before Bcast, buf is 0
+[2]: After Bcast, buf is 500
+[3]: Before Bcast, buf is 0
+[3]: After Bcast, buf is 500
+[4]: Before Bcast, buf is 0
+[4]: After Bcast, buf is 500
+

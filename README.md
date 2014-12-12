@@ -1,10 +1,6 @@
-This repo holds assignments/ Labs for ICS 2410: Parallel Programming 
+CS2014
+======
 
-To avoid conflicts please follow these simple instructions: 
-1. To get started, set the remote url to the this repo's remote url on your git client 
-2. Create a folder and name it your registration number for example "cs281-0837/2010" 
-3. Work from your folder i.e the one you created with your registration number 
-4. Always commit with an appropriate message, it helps a lot when things go wrong, Pull then Push 
-5. Here's a good cheatsheet for those new to the awesome Git: http://ndpsoftware.com/git-cheatsheet.html
+Repository for cs4
 
-Yours Truly
+This is a repository for JKUAT COMPUTER SCIENCE CLASS OF 2014 for assignments and groupworks for PARALLEL PROGRAMMING.

@@ -1,6 +1,0 @@
-bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/MPI/CS281-2152-2010 $ mpicc -o p2pCommunication p2pCommunication.c
-bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/MPI/CS281-2152-2010 $ mpiexec -np 2 ./p2pCommunication
-Hello World from processor 1 of 2!
-bettie@bettie-300E4C-300E5C-300E7C ~/Desktop/MPI/CS281-2152-2010 $ mpiexec -np 4 ./p2pCommunication
-Hello World from processor 1 of 4!
-

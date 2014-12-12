@@ -1,0 +1,14 @@
+/*CS281-0866/2010*/
+
+Broadcast of processors with one being the root process.
+
+paul@paul-HP-ProBook-4530s:~/Documents$ mpicc bcast.c -o ./bcast
+paul@paul-HP-ProBook-4530s:~/Documents$ mpirun -np 7  ./bcast
+Process 0 broadcasting data 100
+Process 1 received data 100 from root process
+Process 3 received data 100 from root process
+Process 5 received data 100 from root process
+Process 6 received data 100 from root process
+Process 2 received data 100 from root process
+Process 4 received data 100 from root process
+paul@paul-HP-ProBook-4530s:~/Documents$ 
