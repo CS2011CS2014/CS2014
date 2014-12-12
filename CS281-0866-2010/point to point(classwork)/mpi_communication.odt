@@ -1,0 +1,12 @@
+﻿/*CS281-0866/2010*/
+
+
+Output of hello.c. 
+Showing a point to point communication between 3 processors.
+
+paul@paul-HP-ProBook-4530s:~/Documents$ mpicc hello.c -o hello
+paul@paul-HP-ProBook-4530s:~/Documents$ mpirun -np 3 ./hello
+Hello world from process 1 of 3
+Hello world from process 2 of 3
+Hello world from process 0 of 3
+paul@paul-HP-ProBook-4530s:~/Documents$ 

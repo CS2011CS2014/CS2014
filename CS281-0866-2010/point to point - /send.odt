@@ -1,0 +1,12 @@
+/*CS281-0866/2010*/
+
+Output of a communication between 5 processors.
+
+paul@paul-HP-ProBook-4530s:~/Documents$ mpicc send.c -o send
+paul@paul-HP-ProBook-4530s:~/Documents$ mpirun -np 5 ./send
+0 sent 0; received 4
+1 sent 1; received 0
+4 sent 4; received 3
+2 sent 2; received 1
+3 sent 3; received 2
+paul@paul-HP-ProBook-4530s:~/Documents$
