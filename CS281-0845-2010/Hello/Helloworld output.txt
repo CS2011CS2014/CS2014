@@ -1,0 +1,6 @@
+stephen@stephen-Satellite-C850-F32Q:~/CS2014/CS281-0845-2010/Hello$ mpirun -np 4 ./hello
+Hello world,I am processor 0 of 4
+Hello world,I am processor 1 of 4
+Hello world,I am processor 2 of 4
+Hello world,I am processor 3 of 4
+

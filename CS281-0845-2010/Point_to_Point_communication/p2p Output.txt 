@@ -1,0 +1,3 @@
+stephen@stephen-Satellite-C850-F32Q:~/CS2014/CS281-0845-2010/Point_to_Point_communication$ mpirun -np 2 ./p2p
+Mesage sent by process 0
+Mesage received by process 1 is: Hello
